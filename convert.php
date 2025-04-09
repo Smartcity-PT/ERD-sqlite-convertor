@@ -5,6 +5,7 @@ $name = "e_learning";
 // martdevelopers_iLibrary
 // rosariosis
 // e_learning.sql
+// some sql files to test
 
 $lines = file("$name.sql");
 $str = "";
@@ -40,9 +41,9 @@ foreach($lines as $line) {
 		$replacement = '';		
 		$str = preg_replace($pattern, $replacement, $str);
 		
-		$table = explode(" ", $str);
+		$table = explode(" ", $str); //buggy tablenames don't always appear on position 1
 		
-		echo "<h1>table ".$table[1]."</h1>";
+		echo "<h1>table ".$table[1]."</h1>"; 
 		
 		//echo "<pre>";
 		//print_r($table); // show array data
